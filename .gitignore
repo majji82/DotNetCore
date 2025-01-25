@@ -1,0 +1,63 @@
+# Ignore IDE-related files
+.vs/
+.idea/
+*.suo
+*.user
+*.iml
+
+# Ignore build output directories for all projects
+**/bin/
+**/obj/
+**/debug/
+**/release/
+
+# Ignore log files
+*.log
+
+# Ignore user-specific and temporary files
+*.userosscache
+*.sln.docstates
+*.sln.ide
+*.db
+*.sqlite
+*.pdb
+*.cache
+
+# Ignore package directories
+**/node_modules/
+**/bower_components/
+**/wwwroot/lib/
+
+# Ignore runtime files
+*.dll
+*.exe
+
+# Ignore publish directories
+**/publish/
+**/dist/
+
+# Ignore environment-specific configuration files
+**/appsettings.json
+**/appsettings.*.json
+**/secrets.json
+.env
+
+# Ignore image processing/temp files
+**/wwwroot/images/temp/
+**/wwwroot/images/processed/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Ignore Rider & JetBrains IDEs
+.idea/
+*.ipr
+*.iws
+
+# Optional: CI/CD and Docker-related files
+*.yaml
+*.yml
+*.dockerignore
+docker-compose.override.yml
