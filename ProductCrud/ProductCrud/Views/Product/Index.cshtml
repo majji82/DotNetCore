@@ -1,0 +1,38 @@
+﻿@model List<Product>
+
+<h1>Filmy Room</h1>
+
+<div class="container mt-4">
+	<div class="row">
+		@foreach (var product in Model)
+		{
+			<div class="col-md-4 mb-4">
+				<!-- Each card takes 4/12 of the row width -->
+				<div class="card" style="width: 18rem;">
+					@if (!string.IsNullOrEmpty(product.ImageURL))
+					{
+						<img src="@product.ImageURL" alt="@product.Name" class="card-img-top img-fluid" style="width: 400px; height: 400px; object-fit: cover" />
+					}
+					else
+					{
+						<div class="card-img-top text-center p-3 bg-light">
+							<span>No Image</span>
+						</div>
+					}
+					<div class="card-body">
+						<h5 class="card-title">@product.Name</h5>
+						<h6>Ticket Price: @product.Price</h6>
+						<p class="card-text">@product.Description</p>
+						<form action="@Url.Action("ViewSingleProduct", "Product")" method="post" style="display: inline">
+							<input type="hidden" name="id" value="@product.Id" />
+							<button type="submit" class="btn btn-danger btn-sm">View Details</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+</div>
+
+
+<a href="product/create">Add Products</a>

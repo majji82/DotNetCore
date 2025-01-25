@@ -1,0 +1,25 @@
+﻿<h1>Add Product</h1>
+
+<form method="post" asp-action="create">
+	<div class="form-group">
+		<label for="Name">Name</label>
+		<input class="form-control" type="text" id="Name" name="Name" required/>
+	</div>
+	<div>
+		<label for="Description">Description</label>
+		<textarea class="form-control" type="" id="Description" name="Description" required ></textarea>
+	</div>
+	<div>
+		<label for="Price">Price</label>
+		<input class="form-control" type="number" id="Price" name="Price" required/>
+	</div>
+	<div>
+		<label for="Quantity">Quantity</label>
+		<input class="form-control" type="number" id="Quantity" name="Quantity" required />
+	</div>
+	<div>
+		<label for="ImageUrl">ImageUrl</label>
+		<input class="form-control" type="text" id="ImageUrl" name="ImageUrl" />
+	</div>
+	<button class="btn btn-secondary mt-4" type="submit">Add Product</button>
+</form>
